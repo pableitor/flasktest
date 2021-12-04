@@ -4,9 +4,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    title = "John Elder's Blog"
+    return render_template('index.html', title = title)
 
 @app.route('/about')
 def about():
-    #names_list = ['John', 'Mary', 'Wes','Annie','Suzy']
-    return render_template('about.html') # passing variable to a web page
+    names = ['John', 'Mary', 'Wes','Annie','Suzy']
+    title = "About"
+    return render_template('about.html', names = names, title= title) # passing variable to a web page
